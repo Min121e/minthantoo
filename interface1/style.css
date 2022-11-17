@@ -358,13 +358,13 @@ textarea::-webkit-scrollbar {
 }
  
 
-/* @media (max-width: 600px ) {
+@media (max-width: 600px ) {
     body{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-} */
+}
 
 
 
