@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- JS Link -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+        <div class="all">
+
+            <div class="single-card">
+
+                <div class="rating">
+                    <button class="countUp">+</button>
+                    <span class="num">1</span>
+                    <button class="countDown">-</button>
+                </div>
+        
+                <div class="wrapper">
+                    <div class="top">
+                        <div class="top-left">
+                            <div><img src="Person 1.webp" alt=""></div>
+                            <p class="username">Harvey</p>
+                            <p class="date">1 month ago</p>
+                        </div>
+                        <button class="reply-button"><box-icon name='reply' color="#8F00FF"></box-icon>Reply</button>
+                    </div>
+    
+                    <p>Next time you ought to make a life-altering decision, just question yourself 'What would Harvey do?'</p>
+                </div>
+                
+            </div>
+            <div class="single-card">
+
+                <div class="rating">
+                    <button class="countUp">+</button>
+                    <span class="num">4</span>
+                    <button class="countDown">-</button>
+                </div>
+        
+                <div class="wrapper">
+                    <div class="top">
+                        <div class="top-left">
+                            <div><img src="Person 2.jpg" alt=""></div>
+                            <p class="username">Louis</p>
+                            <p class="date">2 month ago</p>
+                        </div>
+                        <button class="reply-button"><box-icon name='reply' color="#8F00FF"></box-icon>Reply</button>
+                    </div>
+    
+                    <p>Give me a mountain – I'll climb it.<br> Give me a Katy Perry song – I'll sing it.</p>
+                </div>
+                
+            </div>
+
+            <div class="sub-all">
+                <!-- <div class="single-card sm">
+
+                    <div class="rating">
+                        <button class="countUp">+</button>
+                        <span class="num">12</span>
+                        <button class="countDown">-</button>
+                    </div>
+            
+                    <div class="wrapper">
+                        <div class="top">
+                            <div class="top-left">
+                                <div><img src="photo.jpg" alt=""></div>
+                                <p class="username">amyrobson</p>
+                                <p class="date">1 month ago</p>
+                            </div>
+                            <button class="reply-button"><box-icon name='reply' color="#8F00FF"></box-icon>Reply</button>
+                        </div>
+        
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero at ut facere. Quae eos soluta nesciunt perspiciatis neque a ipsa omnis eligendi nemo quidem similique, autem minima? Facilis, voluptatibus voluptatum.</p>
+                    </div>
+                    
+                </div>
+
+                <div class="single-card sm">
+    
+                    <div class="rating">
+                        <button class="countUp">+</button>
+                        <span class="num">12</span>
+                        <button class="countDown">-</button>
+                    </div>
+            
+                    <div class="wrapper">
+                        <div class="top">
+                            <div class="top-left">
+                                <div><img src="photo.jpg" alt=""></div>
+                                <p class="username">amyrobson</p>
+                                <span class="you">You</span>
+                                <p class="date">1 month ago</p>
+                            </div>
+
+                            <div class="two-button">
+                                <button class="del-button reply-button"><box-icon type='solid' name='trash-alt' color="red"></box-icon>Delete</button>
+                                <button class="reply-button"><box-icon type='solid' name='edit-alt' color="#8F00FF"></box-icon>Edit</button>
+                            </div>
+                           
+                        </div>
+        
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero at ut facere. Quae eos soluta nesciunt perspiciatis neque a ipsa omnis eligendi nemo quidem similique, autem minima? Facilis, voluptatibus voluptatum.</p>
+                    </div>
+                    
+                </div> -->
+            </div>
+
+            <form class="comment">
+                <div>
+                    <img src="Person 3.webp" alt="">
+                    <!-- <input type="file" class="img-upload"> -->
+                </div>
+
+                <div class="comment-all-input">
+                    <input type="text" class="comment-username" placeholder="Add your username...">
+                    <textarea contenteditable="yes" class="comment-text" placeholder="Add a comment..." cols="78.5" rows="2.5"></textarea>
+                </div>
+                
+                <button type="submit" >SEND</button>
+                <!-- <input type="submit" value="SEND"> -->
+            </form>
+            
+
+        </div>
+
+        <div class="pop-up-noname">
+            <h2>Please write your username!</h2>
+            <button class="popup-btn">Sorry 😒</button>
+        </div>
+        
+        
+        <div class='pop-up-nocomment'>
+            <h2>Please write your comment!</h2>
+            <button class="popup-btn1">Sorry 😒</button>
+        </div>
+
+        <div class="pop-up-nothing">
+            <h2>Please write your username and comment!</h2>
+            <button class="popup-btn2">Sorry 😒</button>
+        </div>
+        
+</body>
+</html>
