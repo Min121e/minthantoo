@@ -605,6 +605,11 @@ textarea::-webkit-scrollbar {
         height: 240px;
     }
 
+    .comment-username {
+        margin-top: 10px;
+        width: 230px;
+    }
+
     .comment .comment-text {
         width: 230px;
         height: 120px;
