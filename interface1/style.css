@@ -510,6 +510,11 @@ textarea::-webkit-scrollbar {
     .comment {
         width: 415px;
     }
+
+    .comment .comment-text {
+        width: 300px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -520,7 +525,6 @@ textarea::-webkit-scrollbar {
     .sub-all {
         width: 365px;
         margin-bottom: 15px;
-        
     }
 
     .single-card.sm {
@@ -529,10 +533,8 @@ textarea::-webkit-scrollbar {
     }
 
     .top-left .you {
-        padding: 0px 5px;
-        margin-right: 10px;
+        padding: 0px;
         margin-top: 10px;
-        margin-left: -25px;
     }
 
     .sub-all .date {
@@ -553,6 +555,42 @@ textarea::-webkit-scrollbar {
         margin-top: 155px;
         margin-bottom: 10px;
         margin-left: -310px;
+    }
+}
+
+@media (min-width: 320px) {
+    .single-card {
+        width: 320px;
+    }
+
+    .comment {
+        width: 320px;
+        padding: 5px;
+    }
+
+    .comment-username {
+        margin-top: 10px;
+        width: 200px;
+    }
+
+    .comment .comment-text {
+        width: 250px;
+    }
+
+    .comment button {
+        margin-top: 155px;
+        margin-bottom: 10px;
+        margin-left: -260px;
+    }
+
+    .sub-all {
+        width: 320px;
+        margin-bottom: 15px;
+    }
+
+    .single-card.sm {
+        width: 320px;
+        margin-left: 0px;
     }
 
     
