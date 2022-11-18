@@ -627,6 +627,29 @@ textarea::-webkit-scrollbar {
     }
 }
 
+@media (max-width: 393px) {
+    .single-card {
+        width: 370px;
+    }
+
+    .comment {
+        width: 370px;
+        padding: 5px;
+        height: 240px;
+    }
+
+    .sub-all {
+        width: 370px;
+        margin-bottom: 15px;
+        border: none;
+    }
+
+    .single-card.sm {
+        width: 370px;
+        margin-left: 0px;
+    }
+}
+
 
 
 
