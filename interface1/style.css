@@ -558,7 +558,7 @@ textarea::-webkit-scrollbar {
     }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
     .single-card {
         width: 320px;
     }
@@ -594,7 +594,7 @@ textarea::-webkit-scrollbar {
     }
 }
 
-@media (min-width: 305px) {
+@media (max-width: 305px) {
     .single-card {
         width: 305px;
     }
@@ -603,11 +603,6 @@ textarea::-webkit-scrollbar {
         width: 305px;
         padding: 5px;
         height: 240px;
-    }
-
-    .comment-username {
-        margin-top: 10px;
-        width: 230px;
     }
 
     .comment .comment-text {
@@ -624,7 +619,6 @@ textarea::-webkit-scrollbar {
     .sub-all {
         width: 305px;
         margin-bottom: 15px;
-        border: none;
     }
 
     .single-card.sm {
