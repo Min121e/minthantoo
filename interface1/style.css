@@ -558,7 +558,7 @@ textarea::-webkit-scrollbar {
     }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) {
     .single-card {
         width: 320px;
     }
@@ -619,6 +619,7 @@ textarea::-webkit-scrollbar {
     .sub-all {
         width: 305px;
         margin-bottom: 15px;
+        border: none;
     }
 
     .single-card.sm {
@@ -626,6 +627,7 @@ textarea::-webkit-scrollbar {
         margin-left: 0px;
     }
 }
+
 
 
 
