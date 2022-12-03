@@ -1,13 +1,26 @@
-const container = document.querySelector('.all')
+const container = document.querySelector(".all");
 
-
-container.addEventListener('click' , (e) => {
-  const tgt = e.target.closest('button')
-  const numSpan = tgt.closest('.rating').querySelector('.num')
-  let num = +numSpan.textContent
-  num += tgt.classList.contains('countUp') ? 1 : -1
+container.addEventListener('click', (e) => {
+  const tgt = e.target.closest("button");
+  if (!tgt) return; 
+  const countUp = tgt.classList.contains("countUp");
+  const otherBtn = countUp ? tgt.parentElement.querySelector(".countDown") : tgt.parentElement.querySelector(".countUp");
+  tgt.matches("button")
+  const numSpan = tgt.closest(".rating").querySelector(".num");
+  
+  if(tgt.disabled) {
+    return;
+  }
+  else if(otherBtn.disabled){
+    otherBtn.disabled = false;
+  }
+  else {
+    tgt.disabled = true;
+  }
+  let num = +numSpan.textContent;
+  num += countUp ? 1 : -1;
   numSpan.textContent = num
-})
+});
 
 const comment_username_el = document.querySelector('.comment-username')
   comment_username_el.focus()
@@ -15,28 +28,10 @@ const comment_text_el = document.querySelector('.comment-text')
 const comment_el = document.querySelector('.comment')
   comment_el.addEventListener('submit', (e) => {
     e.preventDefault()
-    // comment_username_el.focus()
     const task = comment_text_el.value 
     const task_username_el = comment_username_el.value
 
-    // Popup
-    // Nousername
-    // const popup_noname_div = document.createElement('div')
-    // popup_noname_div.classList.add('pop-up')
 
-    // const popup_noname_h2 = document.createElement('h2')
-    // popup_noname_h2.textContent = 'Please write your username.'
-
-    // const popup_btn = document.createElement('button')
-    // popup_btn.classList.add('popup-btn')
-    // popup_btn.textContent = 'Sorry 😒'
-
-    // popup_noname_div.appendChild(popup_noname_h2)
-    // popup_noname_div.appendChild(popup_btn)
-
-    // function openNoNamePopUp() {
-    //   popup_noname_div
-    // }
 
     
     const pop_up_noname_el = document.querySelector('.pop-up-noname')
@@ -139,9 +134,9 @@ const comment_el = document.querySelector('.comment')
   username_el.classList.add('username1')
   username_el.innerText = task_username_el
 
-  const you_el = document.createElement('span')
+  const you_el = document.createElement('div')
   you_el.classList.add('you')
-  you_el.textContent = 'You'
+  you_el.textContent = 'you'
 
   const date_el = document.createElement('p')
   date_el.classList.add('date')
@@ -160,7 +155,6 @@ const comment_el = document.querySelector('.comment')
   const edit_button_el = document.createElement('button')
   edit_button_el.classList.add('reply-button')
   edit_button_el.innerHTML = '<box-icon name=edit-alt type=solid  color="#8F00FF" ></box-icon>Edit'
-    // edit_button_el.textContent = 'Edit'
 
   const delete_button_el = document.createElement('button')
   delete_button_el.classList.add('del-button', 'reply-button')
@@ -169,28 +163,30 @@ const comment_el = document.querySelector('.comment')
   two_button_el.appendChild(delete_button_el)
   two_button_el.appendChild(edit_button_el)
 
-  const textarea_el = document.createElement('textarea')
-  textarea_el.classList.add('wrapper-textarea')
-  textarea_el.value = task
-  // textarea_el.focus() = 
-  textarea_el.setAttribute('readonly', 'readonly')
+  let div_textarea_el = document.createElement('div')
+  div_textarea_el.classList.add('wrapper-textarea')
+  div_textarea_el.innerText = task
+  const textarea = document.createElement('textarea');
 
-  wrapper_el.appendChild(textarea_el)
+
+  wrapper_el.appendChild(div_textarea_el)
 
   comment_text_el.value = ''
   comment_username_el.value = ''
 
+
   edit_button_el.addEventListener('click', () => {
     if(edit_button_el.innerText.toLowerCase() == 'edit') {
-      textarea_el.removeAttribute('readonly')
-      textarea_el.focus()
-      textarea_el.scroll(top)
-      textarea_el.classList.add('wrapper-textarea1')
+      div_textarea_el.parentNode.replaceChild(textarea, div_textarea_el)
+      textarea.innerHTML = task;
+      textarea.classList.add('wrapper-textarea1')
+      textarea.focus()
+      textarea.setSelectionRange(textarea.value.length, textarea.value.length);
       edit_button_el.innerHTML = '<box-icon name=save color="#8F00FF"></box-icon>Save'
-    } 
+    }
     else {
-      username_el.setAttribute('readonly', 'readonly')
-      textarea_el.setAttribute('readonly', 'readonly')
+      div_textarea_el.innerHTML = textarea.value;
+      textarea.parentNode.replaceChild(div_textarea_el, textarea);
       edit_button_el.innerHTML = '<box-icon type=solid name=edit-alt color="#8F00FF"></box-icon>Edit'
     }
   })
