@@ -95,7 +95,9 @@ button:hover {
 .wrapper {
     width: 800px;
     margin-top: 8px;
-    margin-bottom: 10px;
+    padding-bottom: 0px;
+    
+    /* margin-bottom: 10px; */
 }
 
 .top {
@@ -107,6 +109,7 @@ button:hover {
 .top .top-left {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 img {
@@ -163,13 +166,12 @@ box-icon {
     color: white;
     background-color: var(--violet);
     border-radius: 2px;
-    padding : 0px 10px;
-    padding-bottom: 0px;
+    /* padding : 0px 3px 3px; */
     justify-content: center;
     margin-right: 10px;
     margin-top: 0px;
     cursor: default;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .wrapper .wrapper-textarea {
@@ -180,9 +182,9 @@ box-icon {
     font-weight: normal;
     line-break: auto;
     margin-right: 10px;
-    outline: none;
-    resize: none;
-    height: 80px;
+    /* outline: none;
+    resize: none; */
+    /* height: 80px; */
 }
 
 /* .wrapper .wrapper-textarea:focus {
@@ -201,14 +203,14 @@ box-icon {
     margin-right: 10px;
     outline: none;
     resize: none;
-    height: 80px;
+    /* height: 80px; */
 }
 
 .wrapper .wrapper-textarea1:focus {
 	border: 1px solid #D3D3D3;
     border-radius: 5px;
     box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-    height: 90px;
+    /* height: 90px; */
     padding: 5px;
 }
 
@@ -305,8 +307,10 @@ textarea::-webkit-scrollbar {
 .pop-up-nocomment, .pop-up-noname, .pop-up-nothing {
     background-color: darkgray;
     box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-    width: 350px;
-    height: 110px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    height: auto;
     border-radius: 8px;
     position: absolute;
     /* top: 465px;
@@ -327,6 +331,7 @@ textarea::-webkit-scrollbar {
 
 
 .popup-btn, .popup-btn1 {
+    border: none;
     color: black;
     background-color: #f7f3f3;
     border: 1px solid gray;
@@ -341,9 +346,11 @@ textarea::-webkit-scrollbar {
     margin-right: 20px;
     margin-top: 20px;
     font-weight: 550;
+    border-radius: 5px;
 }
 
 .popup-btn2 {
+    border-radius: 5px;
     color: black;
     background-color: #f7f3f3;
     border: 1px solid gray;
@@ -360,7 +367,7 @@ textarea::-webkit-scrollbar {
 }
 
 .pop-up-noname,.pop-up-nocomment,.pop-up-nothing h2 {
-    color: darkred;
+    color: #C0392B;
     font-weight: 300;
     padding-left: 20px;
     padding-top: 10px;
@@ -453,9 +460,9 @@ textarea::-webkit-scrollbar {
         justify-content: center;
     }
 
-    .wrapper .wrapper-textarea {
+    /* .wrapper .wrapper-textarea {
         width: 380px;
-    }
+    } */
     
     .two-button {
         display: flex;
@@ -597,6 +604,7 @@ textarea::-webkit-scrollbar {
 @media (max-width: 305px) {
     .single-card {
         width: 305px;
+        padding: 0px;
     }
 
     .comment {
